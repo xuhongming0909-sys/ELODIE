@@ -1,0 +1,46 @@
+{
+  "name": "coding-workflow-4-agent",
+  "version": "0.1.0",
+  "description": "A complete workflow for Claude and Codex so non-coders can still control project progress",
+  "bin": {
+    "cw4a": "bin/cw4a.js",
+    "coding-workflow-4-agent": "bin/cw4a.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "assets",
+    "config",
+    "missions",
+    "scripts",
+    "specs",
+    "templates",
+    "AGENT.md",
+    "MEMORY.md",
+    ".gitignore",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "ai",
+    "workflow",
+    "codex",
+    "claude",
+    "agent",
+    "template",
+    "project-management"
+  ],
+  "author": "xuhongming0909-sys",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuhongming0909-sys/Coding-Workflow-4-Agent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xuhongming0909-sys/Coding-Workflow-4-Agent/issues"
+  },
+  "homepage": "https://github.com/xuhongming0909-sys/Coding-Workflow-4-Agent#readme",
+  "engines": {
+    "node": ">=18"
+  }
+}

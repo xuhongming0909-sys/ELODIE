@@ -1,0 +1,13 @@
+project:
+  name: "AI Workflow Template"
+  stage: "workflow-bootstrap"
+
+workflow:
+  mission_retention: 30
+  memory_retention: 50
+  mission_name_pattern: "MMDD-short-name"
+  create_mission_for_non_chat_tasks: true
+  sync_formal_specs_before_requirement_changes: true
+
+templates:
+  existing_templates_are_ai_immutable: true

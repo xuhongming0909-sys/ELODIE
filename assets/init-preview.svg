@@ -1,0 +1,54 @@
+<svg width="1600" height="980" viewBox="0 0 1600 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="980" fill="#F4F8FB"/>
+  <text x="92" y="108" fill="#102131" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="800">What lands in the project after init</text>
+  <text x="92" y="152" fill="#4B667A" font-family="Segoe UI, Arial, sans-serif" font-size="26">Fast install. Clear structure. Low ambiguity.</text>
+
+  <rect x="92" y="222" width="510" height="626" rx="30" fill="#0D1822"/>
+  <circle cx="136" cy="268" r="10" fill="#FF6F7D"/>
+  <circle cx="168" cy="268" r="10" fill="#FFCF5C"/>
+  <circle cx="200" cy="268" r="10" fill="#50D890"/>
+  <text x="236" y="276" fill="#C8D8E6" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Terminal</text>
+
+  <text x="132" y="352" fill="#8EE6FF" font-family="Consolas, monospace" font-size="30">$ npx coding-workflow-4-agent</text>
+  <text x="132" y="398" fill="#8EE6FF" font-family="Consolas, monospace" font-size="30">  init . --assistant codex</text>
+  <text x="132" y="492" fill="#E6F3FB" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">In one command, the project gains:</text>
+
+  <rect x="132" y="548" width="430" height="66" rx="16" fill="#132637"/>
+  <text x="164" y="591" fill="#DDF7FF" font-family="Segoe UI, Arial, sans-serif" font-size="28">AI rules file</text>
+
+  <rect x="132" y="632" width="430" height="66" rx="16" fill="#132637"/>
+  <text x="164" y="675" fill="#DDF7FF" font-family="Segoe UI, Arial, sans-serif" font-size="28">Formal specs and module specs</text>
+
+  <rect x="132" y="716" width="430" height="66" rx="16" fill="#132637"/>
+  <text x="164" y="759" fill="#DDF7FF" font-family="Segoe UI, Arial, sans-serif" font-size="28">Mission-based task closure</text>
+
+  <rect x="662" y="222" width="846" height="626" rx="30" fill="#FFFFFF" stroke="#B7CAD9" stroke-width="3"/>
+  <text x="718" y="290" fill="#102131" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="800">project/</text>
+
+  <text x="742" y="352" fill="#213647" font-family="Consolas, monospace" font-size="28">├─ AGENT.md</text>
+  <text x="1018" y="352" fill="#587184" font-family="Segoe UI, Arial, sans-serif" font-size="22">or `CLAUDE.md`</text>
+
+  <text x="742" y="406" fill="#213647" font-family="Consolas, monospace" font-size="28">├─ MEMORY.md</text>
+  <text x="1018" y="406" fill="#587184" font-family="Segoe UI, Arial, sans-serif" font-size="22">Recent handoff memory</text>
+
+  <text x="742" y="460" fill="#213647" font-family="Consolas, monospace" font-size="28">├─ config/</text>
+  <text x="1018" y="460" fill="#587184" font-family="Segoe UI, Arial, sans-serif" font-size="22">Config and secret placeholders</text>
+
+  <text x="742" y="514" fill="#213647" font-family="Consolas, monospace" font-size="28">├─ missions/</text>
+  <text x="1018" y="514" fill="#587184" font-family="Segoe UI, Arial, sans-serif" font-size="22">One folder per non-chat task</text>
+
+  <text x="742" y="568" fill="#213647" font-family="Consolas, monospace" font-size="28">├─ scripts/</text>
+  <text x="1018" y="568" fill="#587184" font-family="Segoe UI, Arial, sans-serif" font-size="22">Trim and maintenance helpers</text>
+
+  <text x="742" y="622" fill="#213647" font-family="Consolas, monospace" font-size="28">├─ specs/</text>
+  <text x="1018" y="622" fill="#587184" font-family="Segoe UI, Arial, sans-serif" font-size="22">Project truth and module specs</text>
+
+  <text x="742" y="676" fill="#213647" font-family="Consolas, monospace" font-size="28">└─ templates/</text>
+  <text x="1018" y="676" fill="#587184" font-family="Segoe UI, Arial, sans-serif" font-size="22">Reference templates and examples</text>
+
+  <rect x="718" y="740" width="338" height="64" rx="18" fill="#0F2636"/>
+  <text x="776" y="782" fill="#8EE6FF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Codex → AGENT.md</text>
+
+  <rect x="1090" y="740" width="338" height="64" rx="18" fill="#143247"/>
+  <text x="1150" y="782" fill="#8EE6FF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Claude → CLAUDE.md</text>
+</svg>

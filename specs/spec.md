@@ -15,7 +15,7 @@
 
 | Module | Role | Source of Truth |
 | --- | --- | --- |
-| Workflow Rules | Stable AI behavior and read order | `AGENT.md` |
+| Workflow Rules | Stable AI behavior and read order | assistant rules file (`AGENT.md` or `CLAUDE.md`) |
 | Human Entry | Project introduction and navigation | `README.md` |
 | Project Spec | Project map and formal spec index | `specs/spec.md` |
 | Sub Specs | Long-lived detailed requirements | `specs/*.md` |
@@ -27,10 +27,10 @@
 
 ## Global Rules
 
-- AI reads `AGENT.md`, then `README.md`, then this file, then relevant sub-specs.
+- AI reads the assistant rules file, then `README.md`, then this file, then relevant sub-specs.
 - Every non-chat AI task creates a mission under `missions/`.
 - If a task changes formal requirements, formal specs must be updated before implementation.
-- Existing templates and `AGENT.md` are immutable to AI.
+- Existing templates and the assistant rules file are immutable to AI.
 - This workflow does not define a source-code directory structure.
 - Secrets may only exist in `config/secrets.yaml`.
 - Non-code documentation in this repository should be written in English.

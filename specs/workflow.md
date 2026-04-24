@@ -12,7 +12,7 @@
 ## In Scope
 
 - `README.md`
-- `AGENT.md`
+- assistant rules file (`AGENT.md` or `CLAUDE.md`)
 - `MEMORY.md`
 - `specs/`
 - `missions/`
@@ -36,12 +36,12 @@
 
 ## Core Rules
 
-- `AGENT.md` contains only two top-level sections: `Workflow` and `Constitution`.
+- The assistant rules file contains only two top-level sections: `Workflow` and `Constitution`.
 - Every non-chat task creates a mission with `spec.md` and `plan.md`.
 - Mission folder names use `MMDD-short-name`.
 - `missions/` keeps only the latest 30 missions.
 - If a mission changes formal requirements, `specs/` must be updated before implementation.
-- `AGENT.md` is immutable to AI and does not use a template.
+- The assistant rules file is immutable to AI and does not use a template.
 - Existing templates are immutable to AI.
 - Subagent templates live in `templates/subagents/`; AI may add new ones but may not modify existing ones.
 - Templates are reference material, not mandatory literal text; AI should adapt them to the task.
@@ -72,4 +72,4 @@
 
 ## Open Questions
 
-- The user may continue refining `AGENT.md` wording and the template catalog later.
+- The user may continue refining the assistant rules wording and the template catalog later.

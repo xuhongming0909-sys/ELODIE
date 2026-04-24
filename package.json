@@ -1,18 +1,17 @@
 {
-  "name": "coding-workflow-4-agent",
+  "name": "elodie-skill",
   "version": "0.1.0",
-  "description": "A complete workflow for Claude and Codex so non-coders can still control project progress",
+  "description": "A workflow toolkit that helps non-coders guide AI coding agents with clear rules and structure",
   "bin": {
-    "cw4a": "bin/cw4a.js",
-    "coding-workflow-4-agent": "bin/cw4a.js"
+    "elodie": "bin/elodie.js"
   },
   "files": [
     "bin",
     "lib",
-    "assets",
     "config",
     "missions",
     "scripts",
+    "skills",
     "specs",
     "templates",
     "AGENT.md",

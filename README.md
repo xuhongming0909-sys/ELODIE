@@ -1,77 +1,62 @@
-# Coding Workflow 4 Agent
+# ELODIE SKILL
 
-<div align="center">
-
-[![English](https://img.shields.io/badge/Read-English-0B1220?style=for-the-badge&logo=readthedocs&logoColor=8EE6FF)](#english)
-[![Chinese](https://img.shields.io/badge/Read-%E4%B8%AD%E6%96%87-0B1220?style=for-the-badge&logo=readthedocs&logoColor=8EE6FF)](#chinese)
-[![Node.js](https://img.shields.io/badge/node-%3E%3D18-0B1220?style=for-the-badge&logo=node.js&logoColor=8EE6FF)](#quick-start)
-[![License](https://img.shields.io/badge/license-MIT-0B1220?style=for-the-badge)](./LICENSE)
-[![AI Workflow](https://img.shields.io/badge/AI-first-workflow-0B1220?style=for-the-badge)](#why-it-hits)
-
-</div>
-
-![Coding Workflow 4 Agent Hero](./assets/hero.svg)
-
-<div align="center">
-  <strong>Give Claude and Codex a real project operating system.</strong><br />
-  Specs. Missions. Memory. Config. Subagent templates.<br />
-  So even non-coders can keep AI projects under control.
-</div>
-
-## Choose Your Language
-
-| Entry | Jump |
+| Language | Link |
 | --- | --- |
-| 🇺🇸 English | [Open English](#english) |
-| 🇨🇳 中文 | [打开中文](#chinese) |
+| English | [Open English](#english) |
+| 中文 | [打开中文](#chinese) |
 
-## Why It Hits
-
-| 😵 Without a workflow | 😎 With Coding Workflow 4 Agent |
+| Item | Value |
 | --- | --- |
-| Requirements disappear into chat history | Rules and specs become real project files |
-| Claude and Codex re-learn the project every session | New sessions re-enter through `AGENT.md` or `CLAUDE.md` |
-| Specs, APIs, formulas, and outputs drift apart | Formal specs keep one source of truth |
-| Tasks start fast and end vaguely | Every non-chat task can close through a `mission` |
-| Context lives in scattered chats | `MEMORY.md` keeps short handoff memory |
-| Subagents speed up and then collide | Templates define clear scope and boundaries |
+| Name | `ELODIE SKILL` |
+| npm package | `elodie-skill` |
+| CLI command | `elodie` |
+| Skill name | `elodie-skill` |
+| Positioning | A workflow toolkit for AI coding agents |
+| Core value | Help non-coders guide AI development with clear rules, specs, and task closure |
+| Works with | Codex, Claude |
+| Main action | `init` |
 
-![From Chat Chaos to Project Control](./assets/impact-board.svg)
+| What ELODIE SKILL solves | How it solves it |
+| --- | --- |
+| AI forgets requirements across sessions | `AGENT.md` / `CLAUDE.md` define stable rules |
+| Specs drift across pages, APIs, and formulas | `specs/` keeps formal project truth |
+| Tasks start but do not close cleanly | `missions/` creates task-level closure |
+| Context is trapped in chat history | `MEMORY.md` stores short handoff memory |
+| Repeated subagent work becomes messy | `templates/subagents/` keeps reusable boundaries |
 
-![Workflow Map](./assets/workflow-map.svg)
+| Important note | Status |
+| --- | --- |
+| `npx elodie ...` from npm | Not available yet because the package is not published to npm |
+| `init` capability | Works locally right now |
+| Recommended current usage | Run from the repo itself or install the repo locally |
+| Skill install for Codex / Claude | Works locally right now |
 
 ## Quick Start
 
 | Goal | Command |
 | --- | --- |
-| Start with Codex | `npx coding-workflow-4-agent init . --assistant codex` |
-| Start with Claude | `npx coding-workflow-4-agent init . --assistant claude` |
-| Install globally | `npm install -g coding-workflow-4-agent` |
+| Run directly from this repo | `node ./bin/elodie.js init . --assistant codex` |
+| Install this repo locally as a global command | `npm install -g .` |
+| Then use the command | `elodie init . --assistant codex` |
+| Install into another target directory | `elodie init C:\\path\\to\\project --assistant claude` |
+| Install the ELODIE SKILL into Codex | `powershell -ExecutionPolicy Bypass -File .\\scripts\\install-skill.ps1 codex` |
+| Install the ELODIE SKILL into Claude | `powershell -ExecutionPolicy Bypass -File .\\scripts\\install-skill.ps1 claude` |
 
-## What `init` Drops Into Your Project
-
-```text
-project/
-├─ AGENT.md or CLAUDE.md
-├─ MEMORY.md
-├─ config/
-├─ missions/
-├─ scripts/
-├─ specs/
-└─ templates/
-```
-
-![What init adds to your project](./assets/init-preview.svg)
-
-| File / Folder | What it does |
+| `init` creates | Purpose |
 | --- | --- |
-| `AGENT.md` / `CLAUDE.md` | Long-term AI rules and workflow entry |
+| `AGENT.md` or `CLAUDE.md` | Stable assistant rules |
+| `MEMORY.md` | Recent handoff memory |
+| `config/` | Shared config and secrets placeholder |
+| `missions/` | Short-lived task closure |
+| `scripts/` | Maintenance helpers |
 | `specs/` | Formal project and module specs |
-| `missions/` | Short-lived task scope and closure |
-| `MEMORY.md` | Rolling handoff memory |
-| `config/` | Shared config and secret placeholders |
 | `templates/` | Reference templates and examples |
-| `scripts/` | Simple maintenance helpers |
+
+| Skill package | Location |
+| --- | --- |
+| Shared skill | `skills/elodie-skill/` |
+| Codex install target | `%USERPROFILE%\\.codex\\skills\\elodie-skill` |
+| Claude install target | `%USERPROFILE%\\.claude\\skills\\elodie-skill` |
 
 ---
 
@@ -79,100 +64,98 @@ project/
 
 ## English
 
-### What This Is
+### One-line Summary
 
-Most AI coding projects do not fail because the model is weak.  
-They fail because the project has no operating system.
+ELODIE SKILL helps non-coders guide AI coding agents through a clear, reusable workflow.
 
-**Coding Workflow 4 Agent** is a reusable workflow layer for AI-built software projects.
+### What It Is
 
-It is not:
-
-- not a prompt pack
-- not a boilerplate app
-- not a forced code architecture
-
-It is:
-
-- a rules file for the assistant
-- a formal spec system
-- a mission system for non-chat work
-- a rolling memory file for handoff
-- a template system for repeatable structure
-
-### What Makes It Different
-
-| Layer | Why it matters |
+| Question | Answer |
 | --- | --- |
-| `specs/` | Real specs can define APIs, formulas, filters, lists, fields, outputs, and acceptance rules |
-| `missions/` | Implementation, review, analysis, and requirement-change work all get a scope and a close |
-| `MEMORY.md` | New AI sessions do not start from zero |
-| `templates/` | AI gets a structure to follow without being forced to copy text mechanically |
-| `subagents` templates | Repeated side-work can become reusable specialist templates |
+| Is it a prompt pack? | No |
+| Is it an app scaffold? | No |
+| Is it a workflow layer for AI-built projects? | Yes |
+| Is it designed for non-coders? | Yes |
 
-### What Problem It Solves
+### Core Structure
 
-| Common mess | Workflow answer |
+| Path | Role |
 | --- | --- |
-| "The AI forgot what we decided" | Put the decision into specs or memory |
-| "The API and UI describe different rules" | Formal specs define one contract |
-| "The task is half-done but nobody knows the boundary" | Put it in a mission with `spec.md` and `plan.md` |
-| "A new model lost all context" | Re-entry starts from the workflow files |
-| "Too many subagents touched the same area" | Templates define write scope and no-overlap rules |
+| `AGENT.md` / `CLAUDE.md` | Long-term assistant rules |
+| `specs/spec.md` | Project-level map and index |
+| `specs/*.md` | Detailed formal specs |
+| `missions/<name>/spec.md` | Task scope |
+| `missions/<name>/plan.md` | Task steps, validation, results, risks |
+| `MEMORY.md` | Short handoff memory |
+| `config/config.yaml` | Non-sensitive config |
+| `config/secrets.yaml` | Sensitive local values |
+| `templates/` | Reference templates |
 
-### Quick Start
+### Why It Fits Complex Projects
 
-#### Run directly
+| Need | ELODIE SKILL support |
+| --- | --- |
+| API definitions | Supported in specs |
+| Formula definitions | Supported in specs |
+| Field definitions | Supported in specs |
+| Filter rules | Supported in specs |
+| Output rules | Supported in specs |
+| Acceptance rules | Supported in specs |
+
+### Current CLI Reality
+
+| Command | Works now | Notes |
+| --- | --- | --- |
+| `node ./bin/elodie.js init . --assistant codex` | Yes | Works inside this repo |
+| `npm install -g .` then `elodie init . --assistant codex` | Yes | Best current experience |
+| `npx elodie init . --assistant codex` | No | Not until the package is published to npm |
+| `powershell -ExecutionPolicy Bypass -File .\scripts\install-skill.ps1 codex` | Yes | Installs the ELODIE SKILL into Codex |
+| `powershell -ExecutionPolicy Bypass -File .\scripts\install-skill.ps1 claude` | Yes | Installs the ELODIE SKILL into Claude |
+
+### Recommended Usage
+
+#### Option 1: use immediately from the repo
 
 ```bash
-npx coding-workflow-4-agent init . --assistant codex
+node ./bin/elodie.js init . --assistant codex
 ```
 
-or
+#### Option 2: install the repo locally, then use `elodie`
 
 ```bash
-npx coding-workflow-4-agent init . --assistant claude
+npm install -g .
+elodie init . --assistant codex
 ```
 
-#### Install globally
+#### Option 3: install into another project path
 
 ```bash
-npm install -g coding-workflow-4-agent
+elodie init C:\path\to\project --assistant claude
 ```
 
-then
+#### Option 4: install the skill into Codex or Claude
 
-```bash
-cw4a init . --assistant codex
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install-skill.ps1 codex
+powershell -ExecutionPolicy Bypass -File .\scripts\install-skill.ps1 claude
 ```
 
-### Assistant Output
+### Who It Is For
 
-| Assistant | Generated file |
+| Good fit | Bad fit |
 | --- | --- |
-| Codex | `AGENT.md` |
-| Claude | `CLAUDE.md` |
+| Non-coders who still want control | People who want pure chat-only improvisation |
+| Teams switching across Codex and Claude | One-off throwaway scripts |
+| Projects with formulas, APIs, rules, and outputs | Work that does not need structure or handoff |
 
-### Good Fit / Bad Fit
+### Promise
 
-| Good fit ✅ | Bad fit ❌ |
+| Focus | Result |
 | --- | --- |
-| Non-technical founders who still want control | People who want AI to improvise everything from chat only |
-| Products with rules, formulas, APIs, outputs, and validation | Tiny throwaway scripts with no continuity |
-| Teams switching between Claude and Codex | Teams that never reuse project context |
-| Projects where task closure matters | Work that does not need specs or handoff memory |
-
-### Design Principles
-
-- Keep workflow files small, readable, and reusable
-- Treat templates as references, not compulsory copy-paste
-- Split large specs before they become unreadable
-- Keep secret values out of markdown
-- Let AI move fast, but only inside visible boundaries
-
-### The Pitch in One Line
-
-> If AI is writing the code, this workflow helps humans keep the wheel.
+| Clear rules | Less AI drift |
+| Formal specs | Better requirement consistency |
+| Task closure | Better execution trace |
+| Reusable templates | Better repeatability |
 
 ---
 
@@ -180,94 +163,95 @@ cw4a init . --assistant codex
 
 ## 中文
 
-### 这是什么
+### 一句话
 
-大多数 AI 编码项目失控，不是因为模型不够强，而是因为项目没有一套真正的工作流。
+`ELODIE SKILL` 是一套给 AI 写代码使用的工作流，让不会写代码的人也能更清楚地控制项目。
 
-**Coding Workflow 4 Agent** 不是提示词包，不是脚手架，也不是强行规定代码目录结构。  
-它是一层给 AI 项目使用的“项目操作系统”。
+### 它是什么
 
-它把这些东西固定下来：
-
-- AI 长期规则文件
-- 正式需求和模块 spec
-- 非闲聊任务的 mission 闭环
-- 跨会话的记忆文件
-- 可复用模板
-
-### 它解决什么问题
-
-| 常见问题 | 这套工作流怎么解决 |
+| 问题 | 回答 |
 | --- | --- |
-| AI 每次开新会话都像失忆 | 从 `AGENT.md` 或 `CLAUDE.md` 重新进入项目 |
-| 页面、接口、公式、输出口径越写越乱 | 用 `specs/` 固定正式口径 |
-| 任务做了一半，边界不清，没人知道算不算完成 | 用 `missions/` 写清范围、步骤、验证 |
-| 换 Claude 或 Codex 就掉上下文 | 用 `MEMORY.md` 做短期交接 |
-| 子代理越开越多，最后互相打架 | 用模板约束职责、输入输出、写入边界 |
+| 它是提示词包吗 | 不是 |
+| 它是脚手架吗 | 不是 |
+| 它是给 AI 项目的工作流层吗 | 是 |
+| 它适合不懂代码的人吗 | 是 |
 
-### 为什么它更适合复杂项目
+### 核心结构
 
-这套 workflow 的 spec 不是空泛需求文档。  
-它可以明确写：
-
-- API 定义
-- 字段定义
-- 公式定义
-- 筛选规则
-- 列表定义
-- 外部输出规则
-- 验收标准
-
-这对监控、套利、量化、报表、后台系统这类项目很重要。  
-因为很多时候，**公式和接口本身就是需求的一部分**。
-
-### 快速开始
-
-#### 直接使用
-
-```bash
-npx coding-workflow-4-agent init . --assistant codex
-```
-
-或者
-
-```bash
-npx coding-workflow-4-agent init . --assistant claude
-```
-
-#### 全局安装
-
-```bash
-npm install -g coding-workflow-4-agent
-```
-
-然后
-
-```bash
-cw4a init . --assistant codex
-```
-
-### 初始化后会得到什么
-
-| 内容 | 作用 |
+| 路径 | 作用 |
 | --- | --- |
-| `AGENT.md` / `CLAUDE.md` | AI 的长期规则与工作流入口 |
-| `specs/` | 项目总 spec 与模块 spec |
-| `missions/` | 每次非闲聊任务的闭环容器 |
-| `MEMORY.md` | 最近项目记忆与交接信息 |
-| `config/` | 非敏感配置与敏感信息占位 |
+| `AGENT.md` / `CLAUDE.md` | AI 长期规则 |
+| `specs/spec.md` | 项目总览和索引 |
+| `specs/*.md` | 详细正式需求 |
+| `missions/<name>/spec.md` | 当前任务范围 |
+| `missions/<name>/plan.md` | 当前任务步骤、验证、结果、风险 |
+| `MEMORY.md` | 最近交接记忆 |
+| `config/config.yaml` | 非敏感配置 |
+| `config/secrets.yaml` | 敏感本地配置 |
 | `templates/` | 模板与案例 |
-| `scripts/` | 轻量维护脚本 |
+
+### 它为什么适合复杂项目
+
+| 需求类型 | ELODIE SKILL 是否支持 |
+| --- | --- |
+| API 定义 | 支持 |
+| 公式定义 | 支持 |
+| 字段定义 | 支持 |
+| 筛选规则 | 支持 |
+| 输出规则 | 支持 |
+| 验收标准 | 支持 |
+
+### 当前 CLI 真实情况
+
+| 命令 | 现在能不能用 | 说明 |
+| --- | --- | --- |
+| `node ./bin/elodie.js init . --assistant codex` | 能 | 在仓库里直接运行 |
+| `npm install -g .` 后执行 `elodie init . --assistant codex` | 能 | 当前最好用 |
+| `npx elodie init . --assistant codex` | 不能 | 因为还没发布到 npm |
+| `powershell -ExecutionPolicy Bypass -File .\scripts\install-skill.ps1 codex` | 能 | 安装到 Codex 技能目录 |
+| `powershell -ExecutionPolicy Bypass -File .\scripts\install-skill.ps1 claude` | 能 | 安装到 Claude 技能目录 |
+
+### 推荐用法
+
+#### 方案 1：直接在仓库里运行
+
+```bash
+node ./bin/elodie.js init . --assistant codex
+```
+
+#### 方案 2：先本地安装，再用 `elodie`
+
+```bash
+npm install -g .
+elodie init . --assistant codex
+```
+
+#### 方案 3：装入其他项目目录
+
+```bash
+elodie init C:\path\to\project --assistant claude
+```
+
+#### 方案 4：把技能安装到 Codex 或 Claude
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install-skill.ps1 codex
+powershell -ExecutionPolicy Bypass -File .\scripts\install-skill.ps1 claude
+```
 
 ### 适合谁
 
-| 适合 ✅ | 不适合 ❌ |
+| 适合 | 不适合 |
 | --- | --- |
-| 不懂代码但想掌控项目的人 | 只想靠聊天让 AI 自由发挥的人 |
-| 需求复杂、规则多、验证严格的项目 | 一次性小脚本 |
-| 经常切换 Claude / Codex 的团队 | 不需要沉淀上下文的临时任务 |
-| 希望项目文件井井有条的人 | 完全不想写 spec 或记录的人 |
+| 不懂代码但想掌控项目的人 | 只想让 AI 靠聊天自由发挥的人 |
+| 需要在 Codex 和 Claude 之间切换的团队 | 一次性小脚本 |
+| 需求里有公式、接口、规则、输出定义的项目 | 不需要结构和交接的任务 |
 
-### 一句话总结
+### 核心价值
 
-> 如果代码主要由 AI 来写，那人就更需要一套能看得懂、管得住、可复用的工作流。
+| 重点 | 结果 |
+| --- | --- |
+| 规则清晰 | 更少偏航 |
+| spec 正式化 | 需求更一致 |
+| 任务闭环 | 执行更可追踪 |
+| 模板复用 | 更容易复制到别的项目 |
